@@ -1,0 +1,66 @@
+﻿<Window x:Class="ToDoList02.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ToDoList02"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Background="#FFFFEE7D">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Image  Grid.Column="0" Source="/image/icon/1680288337.png"/>
+                <TextBlock Grid.Column="1" TextAlignment="Left" VerticalAlignment="Center" x:Name="NickName" FontSize="18" Text="nickname"/>
+            </Grid>
+            <ScrollViewer Grid.Row="1">
+               <ListBox>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="C:\Users\admin\Downloads\1670934090.png"  Width="48" Height="43"/>
+                        <TextBlock Grid.Column="1" Text="Моя заметка" FontSize="14" TextAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="image/icon/orange-plus.png"  Width="40" Height="40"/>
+                        <TextBlock Grid.Column="1" Text="Добавить" FontSize="14" TextAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ListBox>
+            </ScrollViewer>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Source="image/fon/2.jpg" Stretch="Fill" />
+            <TextBlock Text="My task" VerticalAlignment="Bottom" Margin="20,0,0,30" FontSize="40" />
+            <ScrollViewer Grid.Row="1">
+                <StackPanel Margin="20,10,0,0">
+                    <CheckBox Content="case1" FontSize="15" Margin="10"/>
+                    <CheckBox Content="case2" FontSize="15" Margin="10"/>
+                    <CheckBox Content="case3" FontSize="15" Margin="10"/>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+            
+       
+    </Grid>
+</Window>
