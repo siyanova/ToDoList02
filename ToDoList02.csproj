@@ -55,10 +55,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Section.cs" />
+    <Page Include="addTask.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="addTask.xaml.cs">
+      <DependentUpon>addTask.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -95,13 +103,31 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="image\icon\1680288337.png" />
+    <Resource Include="image\icon\mainwindow\profile.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="image\fon\2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="image\icon\orange-plus.png" />
+    <Resource Include="image\icon\mainwindow\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\icon\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\icon\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\icon\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\icon\mainwindow\task.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\fon\3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\fon\1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

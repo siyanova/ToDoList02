@@ -21,7 +21,7 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Image  Grid.Column="0" Source="/image/icon/1680288337.png"/>
+                <Image  Grid.Column="0" Source="/image/icon/mainwindow/profile.png"/>
                 <TextBlock Grid.Column="1" TextAlignment="Left" VerticalAlignment="Center" x:Name="NickName" FontSize="18" Text="nickname"/>
             </Grid>
             <ScrollViewer Grid.Row="1">
@@ -31,7 +31,7 @@
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <Image Source="C:\Users\admin\Downloads\1670934090.png"  Width="48" Height="43"/>
+                        <Image Source="image/icon/mainwindow/task.png"  Width="48" Height="43"/>
                         <TextBlock Grid.Column="1" Text="Моя заметка" FontSize="14" TextAlignment="Center" VerticalAlignment="Center"/>
                     </Grid>
                     <Grid>
@@ -39,8 +39,8 @@
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <Image Source="image/icon/orange-plus.png"  Width="40" Height="40"/>
-                        <TextBlock Grid.Column="1" Text="Добавить" FontSize="14" TextAlignment="Center" VerticalAlignment="Center"/>
+                        <Image Source="image/icon/mainwindow/plus.png"  Width="40" Height="40"/>
+                        <Button Grid.Column="1" Name="AddButton" Content="Добавить"  FontSize="14" Background="White" VerticalAlignment="Center" Click="AddButton_Click"/>
                     </Grid>
                 </ListBox>
             </ScrollViewer>
