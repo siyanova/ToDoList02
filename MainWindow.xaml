@@ -25,14 +25,12 @@
                 <TextBlock Grid.Column="1" TextAlignment="Left" VerticalAlignment="Center" x:Name="NickName" FontSize="18" Text="nickname"/>
             </Grid>
             <ScrollViewer Grid.Row="1">
-               <ListBox>
+               <ListBox Name="ListSection" SelectionChanged="ListSection_SelectionChanged">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <Image Source="image/icon/mainwindow/task.png"  Width="48" Height="43"/>
-                        <TextBlock Grid.Column="1" Text="Моя заметка" FontSize="14" TextAlignment="Center" VerticalAlignment="Center"/>
                     </Grid>
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -50,13 +48,11 @@
                 <RowDefinition />
                 <RowDefinition Height="2*"/>
             </Grid.RowDefinitions>
-            <Image Grid.Row="0" Source="image/fon/2.jpg" Stretch="Fill" />
+            <Image Grid.Row="0" Source="image/fon/5.jpg" Stretch="Fill" />
             <TextBlock Text="My task" VerticalAlignment="Bottom" Margin="20,0,0,30" FontSize="40" />
             <ScrollViewer Grid.Row="1">
-                <StackPanel Margin="20,10,0,0">
-                    <CheckBox Content="case1" FontSize="15" Margin="10"/>
-                    <CheckBox Content="case2" FontSize="15" Margin="10"/>
-                    <CheckBox Content="case3" FontSize="15" Margin="10"/>
+                <StackPanel Margin="20,10,0,0" Name ="Stack">
+                    
                 </StackPanel>
             </ScrollViewer>
         </Grid>

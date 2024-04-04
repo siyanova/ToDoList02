@@ -1,0 +1,41 @@
+﻿<Window x:Class="ToDoList02.regist"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ToDoList02"
+        mc:Ignorable="d"
+        Title="regist" Height="450" Width="800">
+    <Grid Background="#FFFFED72">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Label Content="ToDoList" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
+        </Grid>
+        
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right">
+                <Label Content="Логин" FontSize="24"/>
+                <Label Content="Пароль" FontSize="24"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                <TextBox HorizontalContentAlignment="Left" Margin="15" Height="34" Name ="UserNameLogin"/>
+                <TextBox HorizontalContentAlignment="Left" Margin="15" Height="34" Name ="UserNamePassword"/>
+
+            </StackPanel>
+        </Grid>
+       
+        <Grid Grid.Row="2">
+            <Button Content="Войти" Height="50" Background="White" FontSize="18" Width="100" Name="entry" Click="entry_Click"/>
+        </Grid>
+        
+    </Grid>
+</Window>

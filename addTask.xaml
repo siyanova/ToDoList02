@@ -26,13 +26,13 @@
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="5" HorizontalAlignment="Center">
             <RadioButton Checked="RadioButton_fon1">
-                <Image Source="image/fon/1.jpg"/>
+                <Image Source="image/fon/4.jpg"/>
             </RadioButton>
             <RadioButton Checked="RadioButton_fon2">
-                <Image Source="image/fon/2.jpg"/>
+                <Image Source="image/fon/5.jpg"/>
             </RadioButton>
             <RadioButton Checked="RadioButton_fon3">
-                <Image Source="image/fon/3.jpg"/>
+                <Image Source="image/fon/6.jpg"/>
             </RadioButton>
         </StackPanel>
         <Grid Grid.Row="2">

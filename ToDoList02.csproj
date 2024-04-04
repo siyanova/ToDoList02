@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="regist.xaml.cs">
+      <DependentUpon>regist.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Section.cs" />
     <Page Include="addTask.xaml">
       <SubType>Designer</SubType>
@@ -75,6 +78,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="regist.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -106,7 +113,7 @@
     <Resource Include="image\icon\mainwindow\profile.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="image\fon\2.jpg" />
+    <Resource Include="image\fon\5.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="image\icon\mainwindow\plus.png" />
@@ -124,10 +131,10 @@
     <Resource Include="image\icon\mainwindow\task.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="image\fon\3.jpg" />
+    <Resource Include="image\fon\6.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="image\fon\1.jpg" />
+    <Resource Include="image\fon\4.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
