@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Collections.Specialized.BitVector32;
 
 namespace ToDoList02
 {
@@ -22,6 +23,7 @@ namespace ToDoList02
     /// </summary>
     public partial class MainWindow : Window
     {
+        private string idSection;
         public MainWindow(SqlConnection conn, string id)
         {
             InitializeComponent();
@@ -80,22 +82,47 @@ namespace ToDoList02
             addTask window = new addTask(section);
             window.ShowDialog();
             ListSection.Items.Insert(0,CreateButton(section.idIcon, section.name));
+            SqlCommand command = new SqlCommand($"insert into Section values({id}, '{section.name}', {section.idIcon}, 2);",conn);
+            SqlDataReader reader = command.ExecuteReader();
         }
 
         private void ListSection_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Stack.Children.Clear();
+            Button but = new Button() { Content = "Добавить" };
+            but.Click += AddButton_Click1;
+            Stack.Children.Add(but);    
+            
             string a = ((TextBlock)((Grid)ListSection.SelectedItem).Children[1]).Text;
-            SqlCommand comm = new SqlCommand($"select description from Task where idSection = (select id from Section where name = '"+a+"');", conn);
+            SqlCommand comm = new SqlCommand($"select description, status from Task where idSection = (select id from Section where name = '"+a+"');", conn);
             SqlDataReader reader = comm.ExecuteReader();
             while (reader.Read())
             {
                 CheckBox checkbox = new CheckBox();
                 checkbox.Content = reader[0];
                 checkbox.FontSize = 15;
+
+                string b = reader[1].ToString();
+                checkbox.IsChecked = (b == "True");
+
                 Stack.Children.Add(checkbox);
             }
             reader.Close();
+            comm = new SqlCommand($"select id from Section where name = '" + a + "';", conn);
+            reader = comm.ExecuteReader();
+            reader.Read();
+            idSection = reader[0].ToString ();
+            reader.Close();
+        }
+        private void AddButton_Click1(object sender, RoutedEventArgs e)
+        {
+            Delo delo = new Delo();
+            AddCheckBox addCheckBox = new AddCheckBox(delo);
+            addCheckBox.ShowDialog();
+            Stack.Children.Add(new CheckBox() { Content = delo.Name });
+            SqlCommand command = new SqlCommand($"insert into Task values({idSection}, '{delo.Name}', 0);", conn);
+            command.ExecuteNonQuery();
+
         }
     }
 }

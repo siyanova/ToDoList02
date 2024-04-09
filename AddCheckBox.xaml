@@ -1,0 +1,16 @@
+﻿<Window x:Class="ToDoList02.AddCheckBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ToDoList02"
+        mc:Ignorable="d"
+        Title="AddCheckBox" Height="200" Width="300">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="112,30,0,0" TextWrapping="Wrap" Text="Введите задачу" VerticalAlignment="Top"/>
+
+        <TextBox HorizontalAlignment="Left" Margin="94,64,0,0" TextWrapping="Wrap" Name ="Vvod"  VerticalAlignment="Top" Width="120"/>
+        <Button Content="Создать"  HorizontalAlignment="Left" Margin="130,108,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+
+    </Grid>
+</Window>

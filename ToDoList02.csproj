@@ -55,10 +55,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddCheckBox.xaml.cs">
+      <DependentUpon>AddCheckBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Delo.cs" />
     <Compile Include="regist.xaml.cs">
       <DependentUpon>regist.xaml</DependentUpon>
     </Compile>
     <Compile Include="Section.cs" />
+    <Page Include="AddCheckBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="addTask.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
